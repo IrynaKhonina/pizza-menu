@@ -2,6 +2,13 @@ import React from 'react';
 import './index.css'
 import './App.css';
 
+type PizzaProps = {
+    name: string;
+    ingredients: string;
+    photoName: string;
+    price: number;
+}
+
 const pizzaData = [
   {
     name: "Focaccia",
@@ -57,7 +64,7 @@ function App() {
   );
 }
 
-function Header (){
+export const Header =()=>{
   return (
       <header className='header'>
         <h1> PIZZA-MENU</h1>
@@ -65,19 +72,38 @@ function Header (){
   )
 }
 
-function Menu() {
+export const Menu=()=> {
   return (
       <main className='menu'>
         <h2>Our Menu</h2>
-        <Pizza/>
-        <Pizza/>
-        <Pizza/>
-        <Pizza/>
+        <Pizza name="Pizza Spinaci"
+               ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+               photoName="pizzas/spinaci.jpg"
+               price={10}
+        />
+          <Pizza name="Pizza Spinaci"
+                 ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+                 photoName="pizzas/spinaci.jpg"
+                 price={10}
+          />
+
       </main>
   )
 }
-
-function Footer() {
+export const  Pizza =(props: PizzaProps)=> {
+    const { name,ingredients,photoName, price } = props
+    return (
+        <div className="pizza">
+            <img src={photoName} alt={photoName}/>
+            <div>
+                <h3>{name}</h3>
+                <p>{ingredients}</p>
+                <span>{price}</span>
+            </div>
+        </div>
+    );
+}
+export const Footer=()=> {
     const hour = new Date().getHours();
     const openHour = 12;
     const closeHour = 18;
@@ -96,14 +122,6 @@ function Footer() {
     );
 }
 
-function Pizza() {
-  return (
-      <div>
-        <img src="pizzas/spinaci.jpg" alt='Pizza Spinaci'/>
-        <h3>Pizza Spinaci</h3>
-        <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-      </div>
-  );
-}
+
 
 export default App;
