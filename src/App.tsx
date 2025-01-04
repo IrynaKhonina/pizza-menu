@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './index.css'
 import './App.css';
 
 const pizzaData = [
@@ -49,19 +49,58 @@ const pizzaData = [
 
 function App() {
   return (
-      <div>
-    <h1> PIZZA-MENU</h1>
-      <Pizza/>
+      <div className="container">
+        <Header/>
+        <Menu/>
+        <Footer/>
       </div>
   );
 }
 
+function Header (){
+  return (
+      <header className='header'>
+        <h1> PIZZA-MENU</h1>
+      </header>
+  )
+}
+
+function Menu() {
+  return (
+      <main className='menu'>
+        <h2>Our Menu</h2>
+        <Pizza/>
+        <Pizza/>
+        <Pizza/>
+        <Pizza/>
+      </main>
+  )
+}
+
+function Footer() {
+    const hour = new Date().getHours();
+    const openHour = 12;
+    const closeHour = 18;
+    const isOpen = hour >= openHour && hour <= closeHour;
+
+    return (
+        <footer className="footer">
+            {isOpen ? (
+                <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+            ) : (
+                <p>
+                    We're closed. We open at {openHour}:00.
+                </p>
+            )}
+        </footer>
+    );
+}
 
 function Pizza() {
   return (
       <div>
         <img src="pizzas/spinaci.jpg" alt='Pizza Spinaci'/>
-        <h2>Pizza Spinaci</h2>
+        <h3>Pizza Spinaci</h3>
         <p>Tomato, mozarella, spinach, and ricotta cheese</p>
       </div>
   );

@@ -52,7 +52,7 @@ body {
   display: block;
   content: '';
   height: 3px; /* Числовое значение */
-  width: 12rem; /* Числовое значение */
+  width: 4rem; /* Числовое значение */
   background-color: #edc84b;
   position: absolute;
   top: 50%; /* Исправлено: убрано calc() */
