@@ -22,26 +22,7 @@ Welcome to the **Pizza Menu App**! This is a simple React application that displ
 
 ---
 
-## Project Structure 📂
 
-pizza-menu-app/
-├── src/
-│ ├── components/
-│ │ ├── Header.tsx
-│ │ ├── Menu.tsx
-│ │ ├── Footer.tsx
-│ │ ├── Order.tsx
-│ │ └── Pizza.tsx
-│ ├── data/
-│ │ └── pizzaData.ts
-│ ├── styles/
-│ │ ├── index.css
-│ │ └── App.css
-│ ├── App.tsx
-│ └── index.tsx
-├── public/
-├── package.json
-└── README.md
 
 --------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
