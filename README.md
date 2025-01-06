@@ -1,3 +1,49 @@
+# Pizza Menu App 🍕
+
+Welcome to the **Pizza Menu App**! This is a simple React application that displays a menu of delicious pizzas, their ingredients, and prices. The app also includes a dynamic footer that shows whether the pizzeria is currently open or closed.
+
+---
+
+## Features ✨
+
+- **Dynamic Menu**: Displays a list of pizzas with their names, ingredients, and prices.
+- **Sold Out Indicator**: Pizzas that are sold out are clearly marked and visually distinct.
+- **Dynamic Footer**: Shows whether the pizzeria is open or closed based on the current time.
+- **Responsive Design**: The app looks great on both desktop and mobile devices.
+
+---
+
+## Technologies Used 🛠️
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: Adds static typing to JavaScript, improving code quality and readability.
+- **CSS**: Custom styles for creating an attractive and responsive design.
+- **Google Fonts**: Uses the "Roboto Mono" font for a modern and clean look.
+
+---
+
+## Project Structure 📂
+
+pizza-menu-app/
+├── src/
+│ ├── components/
+│ │ ├── Header.tsx
+│ │ ├── Menu.tsx
+│ │ ├── Footer.tsx
+│ │ ├── Order.tsx
+│ │ └── Pizza.tsx
+│ ├── data/
+│ │ └── pizzaData.ts
+│ ├── styles/
+│ │ ├── index.css
+│ │ └── App.css
+│ ├── App.tsx
+│ └── index.tsx
+├── public/
+├── package.json
+└── README.md
+
+--------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
